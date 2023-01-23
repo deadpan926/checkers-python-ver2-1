@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="junhaz6@openlab.ics.uci.edu:22 (2)" exclude=".svn;.cvs;.idea;.DS_Store;.git;.hg;*.hprof" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="junhaz6@openlab.ics.uci.edu">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="junhaz6@openlab.ics.uci.edu:22">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/tmp/pycharm_project_804" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="junhaz6@openlab.ics.uci.edu:22 (2)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/junhaz6/D:\UCI\2021 Fall\ICS 171\Checkers_Student-master\src\checkers-python" local="$PROJECT_DIR$" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

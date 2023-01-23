@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9af98817-af84-4714-94b0-e9089d67724e" name="junhaz6@openlab.ics.uci.edu">
+        <fileTransfer accessType="SFTP" host="junhaz6@openlab.ics.uci.edu" port="22" sshConfigId="12466826-62f2-48df-9d7c-4845fd722688" sshConfig="junhaozhu@junhaz6@openlab.ics.uci.edu:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

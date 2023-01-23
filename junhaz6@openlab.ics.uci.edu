@@ -1,0 +1,151 @@
+from random import randint
+from BoardClasses import Move
+from BoardClasses import Board
+from collections import defaultdict
+#The following part should be completed by students.
+#Students can modify anything except the class name and exisiting functions and varibles.
+
+class Node():
+    def __init__(self, color: int, move: Move =None):
+        self.color: int = color
+        self.move: Move = move
+        self.priorityScore: int = 0
+        self.children: [Node] = []
+
+
+
+        '''
+
+        '''
+
+
+def color(color):
+    return
+
+
+class StudentAI():
+
+    def __init__(self,col,row,p):
+        self.col = col
+        self.row = row
+        self.p = p
+        self.board = Board(col,row,p)
+        self.board.initialize_game()
+        self.color = ''
+        self.opponent = {1:2,2:1}
+        self.color = 2
+
+
+
+    def get_move(self,move):
+        """
+        receiving the opponent move and producing the move.
+        just one simple move
+        """
+        if len(move) != 0:
+            self.board.make_move(move,self.opponent[self.color])
+        else:
+            self.color = 1
+
+        # produce a random move
+        """
+        moves = self.board.get_all_possible_moves(self.color)
+        index = randint(0,len(moves)-1)
+        inner_index =  randint(0,len(moves[index])-1)
+        move = moves[index][inner_index]
+        self.board.make_move(move,self.color)
+        """
+        moves = self.board.get_all_possible_moves(self.color) # list of Move objects
+        move = self.greedy(moves)
+        self.board.make_move(move,self.color)
+        return move
+
+
+    # evaluate the state in my position
+    def evaluate_score(self):
+        point = 0
+        for i in range(self.row):
+            for j in range(self.col):
+                checker = self.board.board[i][j]
+                if checker.color == 'W':
+                    point += 1
+                elif checker.color == 'B':
+                    point -= 1
+        if self.color == 2:
+            return point
+        else:
+            return -point
+
+
+    """
+    # create the search tree for minmax
+    def create_tree(self, root, depth=1):
+        if depth == 0:
+            return root
+        else:
+            move_available = self.board.get_all_possible_moves(self.opponent(self.color))
+            for i in range(len(move_available)):
+                for j in range(len(move_available[i])):
+            return root
+    """
+
+
+    ## the min-max search
+    """def min_max(self, children: [Node], color):
+        determineMinMax = lambda color, priorityMapColor: max if color == priorityMapColor else min
+        priority_map = defaultdict(list)
+    """
+
+
+
+    ## greedy algorithm
+    def greedy(self, moves):
+        """
+        give the children node and the color of checker.
+        :param moves: the all possible moves from the get_all_possible_moves()
+        :return the optimal moves by greedy algorithm
+        """
+        point_list = defaultdict(list)
+        for i in moves:
+            for j in i:
+                self.board.make_move(j,self.color)
+                point_list(self.evaluate_score()).append(j)
+                self.board.undo()
+
+        return point_list[(point_list)][0]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
